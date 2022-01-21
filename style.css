@@ -1,164 +1,150 @@
-* {
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+*
+{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
 }
-
-.home-container ul {
-    list-style: none;
-    background-color: #0C0032;
-    padding-top: 60px;
-    padding-left: 500px;
-    height: 693px;
-    overflow: hidden;
-}
-
-.home-container ul li {
-    display: inline-block;
-    padding-left: 60px;
-}
-
-.home-container ul li a {
+.contact
+{
     position: relative;
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(BG.png);
+    background-size: cover;   
 }
-
-.home-container ul li a:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: top right;
-    transition: transform 0.4s ease-out;
-}
-.home-container ul li a:hover:after {
-    transform: scaleX(1);
-    transform-origin: top left;
-  }
-
-.home-container .vertical-line {
-    position:absolute;
-    bottom: 630px;
-    left: 83%;
-    border-left: 6px solid white;
-    height: 90px;
-}
-
-.home-container ul .logo {
-    position: absolute;
-    left: 70px;
-    bottom: 565px;
-    width: 15%;
-}
-
-.home-container ul p {
-    position: relative;
-    bottom: 50px;
-    left: 800px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 10px;
-}
-
-.home-container ul p:hover {
-    color: #70878D;
-}
-
-
-.home-container .banner a {
-    position: absolute;
-    bottom: 20%;
-    left: 16.5%;
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    border-style: solid;
-    border-radius: 50px;
-    padding-top: 15px;
-    padding-right: 35px;
-    padding-bottom: 15px;
-    padding-left: 35px;
-    transition: ease-in 0.3s;
-}
-
-.home-container .banner a:hover {
-    background-color: white;
-    border-color: #0C0032;
-    color: #0C0032;
-}
-
-.home-container .banner img {
-    position: absolute;
-    left: 50%;
-    top: 130px;
-    width: 45%;
-    transition: 0.5s;
-    animation: opening 5s 1 ease-in ;
-}
-
-@keyframes opening {
-	from {
-        opacity: 0;
-      }
-}
-
-.home-container .banner img:hover {
-    transform:scale(1.05);
-}
-
-.banner .logo .first_text {
-    position: absolute;
-    bottom: 45%;
-    left: 8.5%;
-    color: #70878D;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 100px;
-    font-weight: bold;
+.contact .content
+{
+    max-width: 800px;
     text-align: center;
-    animation: first_text_anim 5s linear 1;
+}
+.contact .content h2
+{
+   font-size: 36px;
+   font-weight: 500;
+   color: #fff; 
+}
+.contact .content p
+{
+   font-weight: 300;
+   color: #fff; 
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .text 
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span
+{ 
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #0c0032;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
 }
 
-.banner .logo .second_text {
-    position: absolute; 
-    bottom: 40%;
-    left: 5.2%;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    font-weight: bold;
-    animation: second_text_anim 1s 5s linear 1 alternate both;
+@media (max-width: 991px)
+{
+   .contact
+   {
+       padding: 50px;
+   } 
+   .container
+   {
+       flex-direction: column;
+   }
+   .container .contactInfo
+   {
+       margin-bottom: 40px;
+   }
+   .container .contactInfo,
+   .contactForm
+   {
+       width: 100%;
+   }
 }
-  
-@keyframes first_text_anim {
-	0%{
-	  color: white;
-	  margin-bottom: -40px;
-	}
-	30%{
-	  letter-spacing: 13px;
-	  margin-bottom: -40px;
-      left: 3%;
-	}
-	85%{
-	  letter-spacing: 8px;
-	  margin-bottom: -40px;
-	}
-  
-  }
-  
-  @keyframes second_text_anim {
-	from {
-	  opacity: 0;
-	}
-  }
